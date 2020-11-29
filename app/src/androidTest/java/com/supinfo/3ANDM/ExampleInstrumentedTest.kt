@@ -1,4 +1,4 @@
-package com.supinfo.tp1
+package com.supinfo.`3ANDM`
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

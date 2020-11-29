@@ -1,4 +1,4 @@
-package com.supinfo.tp1
+package com.supinfo.`3ANDM`
 
 import org.junit.Test
 
