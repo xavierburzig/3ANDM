@@ -2,9 +2,10 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/day1_tp_2_background">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -28,6 +29,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@android:drawable/ic_dialog_email"/>
+
+    <TextView
+        android:id="@+id/welcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:textSize="30sp"
+        android:text="@string/welcomeTitle"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
