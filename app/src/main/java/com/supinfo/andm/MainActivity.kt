@@ -1,4 +1,4 @@
-package com.supinfo.`3ANDM`
+package com.supinfo.andm
 
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
