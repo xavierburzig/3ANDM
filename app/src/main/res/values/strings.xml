@@ -12,4 +12,6 @@
 
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="welcomeTitle">Welcome to your new app</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>
