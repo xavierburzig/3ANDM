@@ -25,4 +25,22 @@
     <string name="cocktail">Cocktail</string>
     <string name="background">background</string>
     <string name="menu_cocktails">Cocktails</string>
+    <string name="title_activity_cocktails">CocktailsActivity</string>
+    <string name="title_activity_cocktail_detail">CocktailDetailActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+    <string name="open_nav_drawer">Open navigation drawer</string>
+    <string name="close_nav_drawer">Close navigation drawer</string>
+    <string name="lorem_ipsum" >"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nunc nisi. Quisque elementum vestibulum urna, at laoreet massa ultrices id. Vivamus pellentesque velit eu metus dignissim finibus. Etiam ac est ultricies, scelerisque leo a, mollis sem. Vestibulum at mi vitae turpis tincidunt imperdiet. Phasellus dapibus orci hendrerit condimentum condimentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n" +
+                "\n" +
+                "Proin tempor nisl eget lorem lacinia facilisis. Fusce sagittis erat in lectus rhoncus, eu pulvinar ligula tempor. Duis ut pretium leo, ut placerat risus. Vestibulum et nunc sed neque auctor eleifend. Vestibulum congue erat id maximus scelerisque. Maecenas interdum tincidunt tortor, non tincidunt sem scelerisque vitae. Duis egestas felis eget eros maximus, ut iaculis lorem sagittis. Curabitur volutpat et ipsum et iaculis. Aliquam lacinia turpis ac urna ullamcorper dictum. Vivamus ac felis a leo interdum varius vel eget lectus. Aliquam sit amet mauris eget quam interdum aliquam. Nam cursus posuere elit nec finibus. Vestibulum commodo mi a ex feugiat, dignissim volutpat arcu hendrerit.\n" +
+                "\n" +
+                "Nullam lacinia vehicula magna, sed posuere velit. Sed congue auctor tincidunt. Vestibulum in lacinia diam. Sed aliquet aliquam ante eget ultrices. Suspendisse et massa odio. Etiam vel iaculis orci, vitae ornare dui. Integer accumsan risus vel convallis feugiat.\n" +
+                "\n" +
+                "Curabitur ac ligula eu diam eleifend condimentum nec nec lectus. Nam quis cursus eros. Sed dignissim fringilla lorem, in lobortis leo condimentum sit amet. Cras id ipsum in urna vehicula consequat quis sit amet enim. Proin pulvinar, ante a tincidunt molestie, libero velit hendrerit nisl, vel ultricies risus velit lacinia quam. Curabitur nunc urna, finibus et eros vitae, tristique scelerisque massa. Cras condimentum libero non lacus pellentesque, placerat imperdiet metus tristique. Vivamus efficitur velit ac magna tempor pellentesque. Integer aliquet tellus lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia ex sit amet placerat rutrum. Fusce leo risus, ultricies sed nisi non, aliquam vestibulum lorem. Vivamus sollicitudin aliquam ligula sed sollicitudin. Praesent cursus ipsum imperdiet, pellentesque ex sit amet, pellentesque est. Nullam a eros a dui consequat ultrices a ut nibh. Nunc consectetur, quam eleifend vestibulum pulvinar, ipsum augue vulputate ipsum, eu dignissim quam est sed ipsum.\n" +
+                "\n" +
+                "Donec urna ipsum, porta eu facilisis nec, fermentum nec mi. Etiam pulvinar turpis non lectus congue vestibulum. Integer porttitor, nisi eget finibus semper, nisi mi malesuada mi, at viverra ligula lorem commodo velit. Sed non mauris pretium, pretium odio quis, fringilla urna. Sed fringilla pretium vestibulum. Nullam dolor quam, laoreet non velit a, laoreet cursus mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque facilisis arcu felis, eu eleifend dolor venenatis in.\n" +
+                "\n" +
+                "Nullam fringilla, dolor nec tempus scelerisque, urna mauris laoreet libero, eget tristique erat odio sit amet ligula. Morbi venenatis ut erat eu lobortis. Ut ullamcorper congue nibh feugiat feugiat. Nulla eros lectus, ullamcorper quis nisl nec, aliquam auctor mauris. Donec purus purus, rhoncus ac magna vel, laoreet lacinia lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor mi, porttitor eu."</string>
 </resources>

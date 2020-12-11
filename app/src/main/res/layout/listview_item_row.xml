@@ -1,51 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_cocktails"
     android:layout_width="match_parent"
-    android:layout_height="96dp"
-    android:layout_marginTop="12dp"
+    android:layout_height="60dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:id="@+id/card_cocktails"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground"
     card_view:cardBackgroundColor="#FFFF"
     card_view:cardCornerRadius="8dp"
-    card_view:contentPadding="10dp"
-    android:foreground="?selectableItemBackground"
-    android:clickable="true">
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    card_view:contentPadding="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="4dp">
 
         <ImageView
             android:id="@+id/itemImageCocktail"
-            android:layout_height="40dp"
             android:layout_width="40dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
             android:adjustViewBounds="true" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/cocktailName"
             android:layout_width="match_parent"
             android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="top"
-            android:text="NIA" />
-
+            android:layout_marginEnd="16dp" />
     </LinearLayout>
-
-</RelativeLayout>
 
 </androidx.cardview.widget.CardView>
