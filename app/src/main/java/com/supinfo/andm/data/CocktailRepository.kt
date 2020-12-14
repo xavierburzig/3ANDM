@@ -5,6 +5,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.util.Log
+import android.widget.Toast
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.MutableLiveData
 import com.squareup.moshi.JsonAdapter
@@ -18,6 +19,7 @@ import com.supinfo.andm.utils.WEB_SERVICE_URL
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
@@ -25,11 +27,25 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 class CocktailRepository(val app: Application) {
 
     val cocktailData = MutableLiveData<List<Cocktail>>()
+    private val cocktailDao = CocktailDatabase.getDatabase(app).cocktailDao()
 
     private val listType = Types.newParameterizedType(
         List::class.java, Cocktail::class.java
     )
     init {
+        CoroutineScope(Dispatchers.IO).launch {
+            val data = cocktailDao.getAll()
+            if (data.isEmpty()) {
+                callWebService()
+            } else {
+                //postvalue car on est en background
+                cocktailData.postValue(data)
+                // onb toast sur le main thread
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(app, "using local data", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
 //        getCocktailData()
         Log.i("cocktails", "Network available: ${networkAvailable()}")
         //background
@@ -41,16 +57,21 @@ class CocktailRepository(val app: Application) {
     suspend fun callWebService() {
         if (networkAvailable()) {
             try {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(app, "using remote data", Toast.LENGTH_LONG).show()
+                }
                 val retrofit = Retrofit.Builder()
                     .baseUrl(WEB_SERVICE_URL)
                     .addConverterFactory(MoshiConverterFactory.create())
                     .build()
                 val service = retrofit.create(CocktailService::class.java)
-                val servideData = service.getCocktailData().body()?.drinks ?: emptyList()
-                for (drink in servideData) {
+                val serviceData = service.getCocktailData().body()?.drinks ?: emptyList()
+                for (drink in serviceData) {
                     Log.i(LOG_TAG, "drinks  : ${drink.strDrink}")
                 }
-                cocktailData.postValue(servideData)
+//                cocktailData.postValue(servideData)
+                cocktailDao.deleteAll()
+                cocktailDao.insertCocktails(serviceData)
             } catch (e : Exception) {
                 Log.e(LOG_TAG, e.message.toString())
             }
