@@ -28,13 +28,13 @@ class CocktailHelper private constructor() {
             return cocktailImages
         }
 
-        private fun getCocktailByIndex(id: Int): String {
-            return getCocktailNames()[id]
-        }
-
-        private fun getImageByIndex(id: Int): String {
-            return getCocktailNames()[id]
-        }
+//        private fun getCocktailByIndex(id: Int): String {
+//            return getCocktailNames()[id]
+//        }
+//
+//        private fun getImageByIndex(id: Int): String {
+//            return getCocktailNames()[id]
+//        }
 
         fun searchCocktailByName(name: String): Int {
             return getCocktailNames().indexOf(getCocktailNames().find { cocktail_name -> name.equals(cocktail_name) })

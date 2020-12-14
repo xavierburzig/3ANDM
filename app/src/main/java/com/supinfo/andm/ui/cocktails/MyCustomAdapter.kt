@@ -52,6 +52,7 @@ class MyCustomAdapter(context: Context, vm: CocktailsViewModel): BaseAdapter() {
         val cocktailImage : ImageView = row.findViewById(R.id.itemImageCocktail)
 
         cocktailName.text = names[pos]
+
         val uri = "@drawable/" + CocktailHelper.getCocktailImages()[pos] // where myresource (without the extension) is the file
         val drawableId: Int = mContext.getResources().getIdentifier(uri, "null", mContext.getPackageName())
         cocktailImage.setImageResource(drawableId)

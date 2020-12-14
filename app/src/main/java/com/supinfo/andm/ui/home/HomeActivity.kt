@@ -3,6 +3,7 @@ package com.supinfo.andm.ui.home
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,7 +11,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
-import androidx.navigation.ui.AppBarConfiguration
 import com.google.android.material.navigation.NavigationView
 import com.supinfo.andm.R
 import com.supinfo.andm.ui.about.AboutActivity
@@ -28,6 +28,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
+//        val disc = findViewById<Button>(R.id.discover)
         discover.setOnClickListener { v ->  homeViewModel.discoverClicked() }
         search.setOnClickListener { v ->
             val text = cocktail_input.text
@@ -40,6 +41,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav_drawer, R.string.close_nav_drawer)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+
         initViewModel()
 
     }

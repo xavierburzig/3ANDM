@@ -22,7 +22,7 @@ class HomeViewModel(app: Application) : AndroidViewModel(app)  {
     init {
         context = app
 //      Initialize properties
-        welcome.value = getApplication<Application>().getString(R.string.welcome)
+        welcome.value = app.getString(R.string.welcome)
     }
 
     fun discoverClicked() {
@@ -39,12 +39,6 @@ class HomeViewModel(app: Application) : AndroidViewModel(app)  {
            discoverClicked()
         } else {
             // sinon l'image
-            val uri = "@drawable/" + CocktailHelper.getCocktailImages()[result] // where myresource (without the extension) is the file
-            val drawableId: Int = context.getResources().getIdentifier(
-                uri,
-                "null",
-                context.getPackageName()
-            )
             val intent = Intent(context, CocktailDetailActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             // To pass any data to next activity
